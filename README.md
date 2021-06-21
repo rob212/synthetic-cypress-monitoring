@@ -27,7 +27,7 @@ If you visit that URL it will give you links to other options.
 You can configure how the server runs:
 
 - `SLEEP_MINS`: How long to wait in minutes between a test run finishing before starting a new run (default: 5 minutes)
-- `SPECS_REGEX`: Select which specs to run (default all: "/cypress/integration/\*-spec.js")
+- `SPECS_REGEX`: Select which specs to run (default all: "/cypress/integration/\*.spec.js")
 - `PORT`: What HTTP port to run the server on (default: 3000)
 
 
