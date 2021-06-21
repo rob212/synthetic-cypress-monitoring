@@ -4,12 +4,12 @@
 
 Run with `npm start` which starts a service on port 3000 (or try it with Docker).
 
-The tests depend on two environment variables being configured:
+Tests can be created to depend on environmental variables if required for security, eg:
 
-- CYPRESS_ESERVICES_USER
-- CYPRESS_ESERVICES_PASSWORD
+- CYPRESS_MONITORING_USER
+- CYPRESS_MONITORING_PASSWORD
 
-You can play with the Cypress tests directly via `npm run cy:open`
+You can experiment with the Cypress tests directly via `npm run cy:open`
 
 ## What does this do?
 
@@ -30,6 +30,4 @@ You can configure how the server runs:
 - `SPECS_REGEX`: Select which specs to run (default all: "/cypress/integration/\*-spec.js")
 - `PORT`: What HTTP port to run the server on (default: 3000)
 
-## Example Instance
 
-Running against dev: https://synthetic-cypress-ocp-community-dev.apps.live.ocp.ros.local/
