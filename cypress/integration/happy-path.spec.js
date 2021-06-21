@@ -7,14 +7,21 @@ Cypress.Commands.add("urlShouldInclude", (text) => {
 
 describe("Goose Sighting", () => {
   it("Record a goose sighting", () => {
-    cy.visit("https://record-a-goose-sighting.herokuapp.com/steps/start");
+    cy.visit("https://record-a-goose-sighting.herokuapp.com/steps/start")
     cy.findByRole("button", { name: /Start now/i}).click()
     cy.findByLabelText("Yes").click()
     cy.findByRole("button", { name: /Continue/i}).click()
 
-    cy.urlShouldInclude("steps/goose-type");
+    cy.urlShouldInclude("steps/goose-type")
     cy.findAllByText(
       "What type of goose did you see?"
     ).should("exist");
-  });
-});
+  })
+
+})
+describe("Second Suite of tests", () => {
+  it("should fail on purpose", () => {
+    cy.visit("https://record-a-goose-sighting.herokuapp.com/steps/start")
+    cy.findByRole("button", { name: /Fake/i}).click()
+  })
+})

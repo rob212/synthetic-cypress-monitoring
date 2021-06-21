@@ -9,7 +9,7 @@ const { merge } = require("mochawesome-merge")
 const generator = require("mochawesome-report-generator")
 
 const SLEEP_MINS = process.env.SLEEP_MINS || 5
-const SPECS_REGEX = process.env.SPECS_REGEX || "/cypress/integration/*-spec.js"
+const SPECS_REGEX = process.env.SPECS_REGEX || "/cypress/integration/*.spec.js"
 const PORT = process.env.PORT || 3000;
 console.log("config", { SLEEP_MINS, SPECS_REGEX, PORT });
 
